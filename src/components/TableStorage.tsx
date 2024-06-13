@@ -31,7 +31,7 @@ function parseSQL(input: string): Table[] {
       // Regex to match individual field definitions
       const fieldRegex = /"(\w+)" (\w+)(?:\((\d+)\))?( NOT NULL)?,?/g;
       let fieldMatch;
-  
+        
       while ((fieldMatch = fieldRegex.exec(tableDefinition)) !== null) {
         const fieldName = fieldMatch[1];
         const fieldType = fieldMatch[2];
@@ -58,3 +58,5 @@ function parseSQL(input: string): Table[] {
   
     return tables;
 }
+
+//dev branch
